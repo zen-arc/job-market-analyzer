@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Scrapy cache
+.scrapy/
+
+# Data files (too large for GitHub)
+data/raw/*.csv
+data/raw/*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
