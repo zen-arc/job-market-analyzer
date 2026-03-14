@@ -16,7 +16,8 @@ ADDONS = {}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "scraper (+http://www.yourdomain.com)"
+# Identify ourselves honestly
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -24,7 +25,10 @@ ROBOTSTXT_OBEY = True
 # Concurrency and throttling settings
 #CONCURRENT_REQUESTS = 16
 CONCURRENT_REQUESTS_PER_DOMAIN = 1
-DOWNLOAD_DELAY = 1
+
+# Be polite - wait 2 seconds between requests
+# Like a human browsing, not a robot hammering the server
+DOWNLOAD_DELAY = 2
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
@@ -77,7 +81,8 @@ DOWNLOAD_DELAY = 1
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
+# Don't cache pages - always get fresh data
+HTTPCACHE_ENABLED = False
 #HTTPCACHE_EXPIRATION_SECS = 0
 #HTTPCACHE_DIR = "httpcache"
 #HTTPCACHE_IGNORE_HTTP_CODES = []

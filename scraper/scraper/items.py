@@ -1,12 +1,15 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
+# items.py
+# Think of this as our data collection form.
+# Every job we scrape will fill in one copy of this form.
 
 import scrapy
 
-
-class ScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class JobItem(scrapy.Item):
+    job_title = scrapy.Field()
+    company_name = scrapy.Field()
+    required_skills = scrapy.Field()
+    salary_range = scrapy.Field()
+    location = scrapy.Field()
+    experience_required = scrapy.Field()
+    job_url = scrapy.Field()
+    date_posted = scrapy.Field()
